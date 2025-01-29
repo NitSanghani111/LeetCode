@@ -1,8 +1,11 @@
 class Solution {
     public String removeOccurrences(String s, String part) {
-     while(s.length() > 0 && s.contains(part) ){
-      s=  s.replace(part,"");
-     }   
-     return s;
+        // Loop until the string contains the substring 'part'
+        while (s.contains(part)) {
+            // Replace the first occurrence of 'part' with an empty string
+            s = s.replaceFirst(part, "");
+        }
+        // Return the modified string after all occurrences of 'part' have been removed
+        return s;
     }
 }
