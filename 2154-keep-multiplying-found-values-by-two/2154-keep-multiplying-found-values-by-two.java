@@ -1,8 +1,8 @@
 class Solution {
     public int findFinalValue(int[] nums, int original) {
-       Hashset<Integer>set = new Hashset<>();
+       HashSet<Integer>set = new HashSet<>();
        for(int num:nums){
-        set.push(num);
+        set.add(num);
        }
        while(set.contains(original)){
         original*=2;
