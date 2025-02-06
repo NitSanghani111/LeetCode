@@ -4,7 +4,7 @@ class Solution {
             return false;
         }
         long  a =0; long  b=(long)Math.sqrt(c);
-        while(a<b ){
+        while(a<=b ){
             long  cal = a*a +b*b;
             if(cal==c){
                 return true;
