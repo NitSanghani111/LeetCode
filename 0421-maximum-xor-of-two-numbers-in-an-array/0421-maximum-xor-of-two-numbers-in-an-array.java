@@ -3,18 +3,18 @@ class Solution {
   int maxXor = 0, mask = 0;
 
         for (int i = 31; i >= 0; i--) {
-            mask |= (1 << i); // Update the mask to consider one more bit (MSB to LSB)
+            mask |= (1 << i); 
 
             HashSet<Integer> prefixes = new HashSet<>();
             for (int num : nums) {
-                prefixes.add(num & mask);  // Store only the first 'i' bits of numbers
+                prefixes.add(num & mask);  
             }
 
-            int possibleMaxXor = maxXor | (1 << i); // Assume we can set this bit in XOR
+            int possibleMaxXor = maxXor | (1 << i); 
 
             for (int prefix : prefixes) {
-                if (prefixes.contains(prefix ^ possibleMaxXor)) { // Check if complement exists
-                    maxXor = possibleMaxXor; // Update maxXor
+                if (prefixes.contains(prefix ^ possibleMaxXor)) { 
+                    maxXor = possibleMaxXor; 
                     break;
                 }
             }
