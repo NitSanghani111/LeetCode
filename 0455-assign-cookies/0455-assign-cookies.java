@@ -9,7 +9,7 @@ class Solution {
             if (s[i] >= g[count]) {  
                 count++;
             } 
-                i++;
+            i++;
         }
         return count;
     }
